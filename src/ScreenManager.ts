@@ -121,7 +121,7 @@ export class ScreenManager {
     private handleCommand(command: string): void {
         let response = '';
 
-        this.outputLines.push(`evaluator@42:~${this.currentDirectory} $ ${command}`);
+        this.outputLines.push(`user@42:~${this.currentDirectory} $ ${command}`);
         if (command === 'help') {
             response = 'Available commands:\n > ls\n> help\n > clear\n > cd [dir] \n > cat [*.txt]\n > view [*.jpg/jpeg/png]\n > run [fordjohnson {numbers}]';
         } else if (command === 'clear') {
@@ -217,7 +217,7 @@ export class ScreenManager {
                     imageMaterial.emissiveColor = new Color3(1, 1, 1);
                     imageMaterial.backFaceCulling = false;
                     this.screenMesh.material = imageMaterial;
-                }, (msg, err) => {
+                }, (msg: any, err: any) => {
                     console.error("Failed to load texture:", msg, err);
                     this.enterViewerMode(`Failed to load image from ${filePath}`);
                 });
@@ -339,7 +339,7 @@ export class ScreenManager {
         
         for (const line of this.outputLines) {
             let wrappedLines: number;
-            if (line.startsWith('evaluator@42')) {
+            if (line.startsWith('user@42')) {
                 const promptEnd = line.indexOf('$ ') + 2;
                 const prompt = line.substring(0, promptEnd);
                 const command = line.substring(promptEnd);
@@ -397,7 +397,7 @@ export class ScreenManager {
         const outputToRender = this.outputLines.slice(startIndex);
         
         for (const line of outputToRender) {
-            if (line.startsWith('evaluator@42')) {
+            if (line.startsWith('user@42')) {
                 const promptEnd = line.indexOf('$ ') + 2;
                 const prompt = line.substring(0, promptEnd);
                 const command = line.substring(promptEnd);
@@ -467,7 +467,7 @@ export class ScreenManager {
             }
         }
 
-        const promptPrefix = `evaluator@42:~${this.currentDirectory} $ `;
+        const promptPrefix = `user@42:~${this.currentDirectory} $ `;
         ctx.fillStyle = '#00FF00';
         ctx.fillText(promptPrefix, 20, y);
         if (this.inputText) {
