@@ -1,4 +1,4 @@
-# Portfolio Project
+# Portfolio Prototype Project
 A modern, interactive 3D static portfolio website built with TypeScript, Tailwind CSS, and Babylon.js. This project represents my learning journey into these technologies and showcases my skills in a visually engaging way.
 
 ---
@@ -43,8 +43,8 @@ A modern, interactive 3D static portfolio website built with TypeScript, Tailwin
 + npm or yarn
 ### Clone and build
 ```bash
-git clone https://github.com/ngaurama/Portfolio.git
-cd Portfolio
+git clone https://github.com/ngaurama/portfolio_prototype.git
+cd portfolio_prototype
 npm install
 npm run dev  # For development
 npm run build  # For production build
@@ -57,7 +57,7 @@ npm run deploy     # Deploys to GitHub Pages
 ```
 
 ## Usage
-Visit the live site at: https://ngaurama.github.io/Portfolio/
+Visit the live site at: https://ngaurama.github.io/portfolio_prototype/
 
 ### Terminal Commands
 + help - Show available commands

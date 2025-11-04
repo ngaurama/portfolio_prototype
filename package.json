@@ -2,7 +2,7 @@
   "name": "portfolio",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https://ngaurama.github.io/Portfolio",
+  "homepage": "https://ngaurama.github.io/portfolio_prototype",
   "type": "module",
   "scripts": {
     "dev": "vite",
